@@ -5,6 +5,9 @@ ion-img {
     width: auto !important;
   }
 }
+ion-card{
+  max-width: 500px !important;
+}
 cdk-virtual-scroll-viewport {
   height: 100%;
   width: 100%;
