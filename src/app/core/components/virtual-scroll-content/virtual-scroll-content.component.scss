@@ -1,6 +1,5 @@
 ion-img {
   height: 500px;
-
   &::part(image) {
     height: auto !important;
     width: auto !important;
@@ -8,4 +7,5 @@ ion-img {
 }
 cdk-virtual-scroll-viewport {
   height: 100%;
+  width: 100%;
 }
