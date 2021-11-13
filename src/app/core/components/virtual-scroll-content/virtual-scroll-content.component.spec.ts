@@ -4,6 +4,8 @@ import { of } from 'rxjs';
 
 import { VirtualScrollContentComponent } from './virtual-scroll-content.component';
 import fakeData from 'src/app/core/Utils/fakeData.json';
+import { DebugElement } from '@angular/core';
+import { By } from '@angular/platform-browser';
 describe('VirtualScrollContentComponent', () => {
   let component: VirtualScrollContentComponent;
   let fixture: ComponentFixture<VirtualScrollContentComponent>;
@@ -28,4 +30,14 @@ describe('VirtualScrollContentComponent', () => {
     fixture.detectChanges();
     component.items.subscribe((val) => expect(val.length).toBe(4000))
   });
+  it('show no results when items stream is empty', () => {
+    component.items = of([])
+    fixture.detectChanges();
+    const debugElement: DebugElement = fixture.debugElement.query(By.css('#cardEmpty'))
+    expect(debugElement).toBeTruthy()
+    if (debugElement) {
+      const element: HTMLElement = debugElement.nativeElement
+      expect(element.innerHTML).toContain("No results")
+    }
+  })
 });

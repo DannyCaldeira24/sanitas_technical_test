@@ -10,6 +10,10 @@
     </ion-card-header>
     <ion-card-content>{{ item.text }}</ion-card-content>
   </ion-card>
+  <ng-container *ngIf="(items | async)?.length == 0">
+    <h5 id="cardEmpty">No results</h5>
+  </ng-container>
+  
 </ion-virtual-scroll>
 <!-- Angular cdk -->
 <!-- <ion-content>
