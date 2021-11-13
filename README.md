@@ -50,7 +50,7 @@ Cualquier duda enviar mail a arquitecturamobile@sanitas.es
 
 El proyecto se debe subir a algún repositorio publico (github, gitlab) para poder revisar la prueba
 
-## Run app
+# Run app
 1) git clone
 2) npm i
 3) npm run run-app
