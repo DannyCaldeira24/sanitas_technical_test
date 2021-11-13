@@ -1,0 +1,11 @@
+ion-img {
+  height: 500px;
+
+  &::part(image) {
+    height: auto !important;
+    width: auto !important;
+  }
+}
+cdk-virtual-scroll-viewport {
+  height: 100%;
+}

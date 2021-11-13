@@ -1,0 +1,20 @@
+<!-- Best performance in Ionic -->
+<ion-virtual-scroll [items]="(items | async)" approxItemHeight="500px">
+  <ion-card *virtualItem="let item; let itemBounds = bounds;" class="ion-margin-bottom">
+    <ion-img [src]="item.photo" [alt]="item.text" (ionError)="item.photo = 'https://picsum.photos/500/500?random'">
+    </ion-img>
+    <ion-card-header>
+      <ion-card-title>ID: {{item.id}}</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>{{ item.text }}</ion-card-content>
+  </ion-card>
+</ion-virtual-scroll>
+<!-- Angular cdk -->
+<!-- <ion-content>
+  <!-- <cdk-virtual-scroll-viewport itemSize="700px">
+    <ion-card *cdkVirtualFor="let item of items" class="ion-margin-bottom">
+      <ion-img [src]="item.photo" [alt]="item.text"></ion-img>
+      <ion-card-content>{{ item.text }}</ion-card-content>
+    </ion-card>
+  </cdk-virtual-scroll-viewport>
+</ion-content> -->

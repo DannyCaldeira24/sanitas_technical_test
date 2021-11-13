@@ -1,0 +1,8 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <app-search-bar [items]="dummyData" (sendFilteredData)="filterEvent($event)"></app-search-bar>
+  </ion-toolbar>
+</ion-header>
+<ion-content>
+  <app-virtual-scroll-content [items]="observerRef"></app-virtual-scroll-content>
+</ion-content>
