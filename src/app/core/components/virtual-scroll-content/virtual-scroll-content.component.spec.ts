@@ -40,4 +40,10 @@ describe('VirtualScrollContentComponent', () => {
       expect(element.innerHTML).toContain("No results")
     }
   })
+  it('show results when items stream is not empty', () => {
+    component.items = of(fakeData)
+    fixture.detectChanges();
+    const debugElement: DebugElement = fixture.debugElement.query(By.css('#cardEmpty'))
+    expect(debugElement).toBeFalsy()
+  })
 });
