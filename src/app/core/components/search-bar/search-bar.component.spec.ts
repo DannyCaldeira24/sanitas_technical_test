@@ -1,6 +1,6 @@
 import { ComponentFixture, TestBed, waitForAsync } from '@angular/core/testing';
 import { IonicModule } from '@ionic/angular';
-import fakeData from 'src/app/core/Utils/fakeData.json';
+import fakeData from 'src/app/core/UtilsDebugPurpose/fakeData.json';
 import { SearchBarComponent } from './search-bar.component';
 
 describe('SearchBarComponent', () => {

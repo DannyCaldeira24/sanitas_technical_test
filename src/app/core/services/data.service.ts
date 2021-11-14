@@ -1,5 +1,7 @@
 import { Injectable } from '@angular/core';
-import fakerData from 'src/app/core/Utils/FakerData';
+import { Observable, of } from 'rxjs';
+import fakerData from 'src/app/core/UtilsDebugPurpose/FakerData';
+import { Dummy } from '../models/Dummy';
 
 @Injectable({
   providedIn: 'root'
@@ -8,7 +10,7 @@ export class DataService {
 
   constructor() { }
 
-  generateDummyData(num) {
+  generateDummyData(num): Observable<Dummy[]> {
     /**
      * This script generates an array of random data and converts it to json
      */
@@ -20,6 +22,6 @@ export class DataService {
         text: fakerData.getLoremParagraph()
       }
     }
-    return JSON.stringify(dummyData)
+    return of(dummyData)
   }
 }

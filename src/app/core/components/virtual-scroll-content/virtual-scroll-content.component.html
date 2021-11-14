@@ -1,4 +1,3 @@
-<!-- Best performance in Ionic -->
 <ng-container *ngIf="(items | async)?.length > 0">
   <ion-virtual-scroll [items]="(items | async)" approxItemHeight="500px">
     <ion-row *virtualItem="let item" class="ion-align-items-center ion-justify-content-center">
@@ -15,15 +14,6 @@
       </ion-card>
     </ion-row>
   </ion-virtual-scroll>
-  <!-- Angular cdk -->
-  <!-- <ion-content>
-  <!-- <cdk-virtual-scroll-viewport itemSize="700px">
-    <ion-card *cdkVirtualFor="let item of items" class="ion-margin-bottom">
-      <ion-img [src]="item.photo" [alt]="item.text"></ion-img>
-      <ion-card-content>{{ item.text }}</ion-card-content>
-    </ion-card>
-  </cdk-virtual-scroll-viewport>
-</ion-content> -->
 </ng-container>
 <ng-container *ngIf="(items | async)?.length == 0">
   <div class="ion-flex ion-align-items-center ion-justify-content-center">
