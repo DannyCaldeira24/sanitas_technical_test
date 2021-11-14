@@ -12,7 +12,7 @@ export class DataService {
 
   generateDummyData(num): Observable<Dummy[]> {
     /**
-     * This script generates an array of random data and converts it to json
+     * This script generates an array of random data
      */
     const dummyData = new Array(num)
     for (let i = 0; i < num; i++) {
