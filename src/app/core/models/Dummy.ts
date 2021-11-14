@@ -1,5 +1,5 @@
 export interface Dummy{
     id: number,
-    photo: any,
+    photo: string,
     text: string
 }

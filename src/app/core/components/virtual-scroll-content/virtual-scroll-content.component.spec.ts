@@ -3,7 +3,7 @@ import { IonicModule } from '@ionic/angular';
 import { of } from 'rxjs';
 
 import { VirtualScrollContentComponent } from './virtual-scroll-content.component';
-import fakeData from 'src/app/core/Utils/fakeData.json';
+import fakeData from 'src/app/core/UtilsDebugPurpose/fakeData.json';
 import { DebugElement } from '@angular/core';
 import { By } from '@angular/platform-browser';
 describe('VirtualScrollContentComponent', () => {

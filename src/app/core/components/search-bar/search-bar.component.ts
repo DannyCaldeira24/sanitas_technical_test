@@ -9,7 +9,7 @@ import { Dummy } from '../../models/Dummy';
 export class SearchBarComponent implements OnInit {
 
   private _itemsList: Dummy[] = []
-  @Output() sendFilteredData: EventEmitter<any> = new EventEmitter<any>();
+  @Output() sendFilteredData: EventEmitter<Dummy[]> = new EventEmitter<Dummy[]>();
   @Input() set items(value: Dummy[]) {
     this._itemsList = [...value]
   }
