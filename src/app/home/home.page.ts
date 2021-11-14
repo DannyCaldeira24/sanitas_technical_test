@@ -2,7 +2,6 @@ import { Component } from '@angular/core';
 import { Dummy } from '../core/models/Dummy';
 import { DataService } from '../core/services/data.service';
 import { BehaviorSubject, Observable, Subscription } from 'rxjs';
-import { map } from 'rxjs/operators';
 @Component({
   selector: 'app-home',
   templateUrl: 'home.page.html',
