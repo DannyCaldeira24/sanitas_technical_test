@@ -1,7 +1,7 @@
 <ng-container *ngIf="(items | async)?.length > 0">
   <ion-virtual-scroll [items]="(items | async)" approxItemHeight="500px">
     <ion-row *virtualItem="let item" class="ion-align-items-center ion-justify-content-center">
-      <ion-card class="ion-margin-bottom">
+      <ion-card class="ion-margin-bottom" [id]="'card-'+item.id">
         <div class="ion-flex ion-align-items-center ion-justify-content-center">
           <ion-img [src]="item.photo" [alt]="item.text"
             (ionError)="item.photo = 'https://picsum.photos/500/500?random='+item.id">

@@ -1,10 +1,38 @@
+@import "../../../../theme/variables.scss";
+
 ion-img {
   height: 500px;
+
   &::part(image) {
     height: auto !important;
     width: auto !important;
   }
 }
-ion-card{
+
+ion-card {
   max-width: 500px !important;
+
+  @for $i from 1 through 1999 {
+    &#card-#{$i} {
+      ion-card-title {
+        --color: var(--ion-color-success);
+      }
+    }
+  }
+
+  @for $i from 2000 through 2999 {
+    &#card-#{$i} {
+      ion-card-title {
+        --color: var(--ion-color-warning);
+      }
+    }
+  }
+
+  @for $i from 3000 through 4000 {
+    &#card-#{$i} {
+      ion-card-title {
+        --color: var(--ion-color-danger);
+      }
+    }
+  }
 }
