@@ -1,5 +1,15 @@
 @import "../../../../theme/variables.scss";
 
+@mixin ion-card-mixin {
+  max-width: 500px;
+  ion-card-title{
+    font-size: 1rem;
+  }
+  ion-card-content{
+    font-size: .75rem;
+  }
+}
+
 ion-img {
   height: 500px;
 
@@ -10,7 +20,7 @@ ion-img {
 }
 
 ion-card {
-  max-width: 500px !important;
+  @include ion-card-mixin;
 
   @for $i from 1 through 1999 {
     &#card-#{$i} {
